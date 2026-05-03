@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Weather App</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<link rel="stylesheet" href="style.css"/>
+
+<style>
+body {
+    background: #1e1e2f;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+input {
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+    background: orange;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkorange;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <img src="images/weatherlogo.png" alt="Weather Logo" width="100">
+
+    <h1>Welcome to the Weather Web App</h1>
+    <h3>Made by @Aditya</h3>
+
+    <h2>Technologies Used:</h2>
+    <p>HTML, CSS, JS, Java, Servlet, JSP, OpenWeather API</p>
+
+    <!-- ✅ FORM -->
+    <form action="MyServlet" method="post" class="searchInput">
+        <input 
+            type="text" 
+            placeholder="Enter City Name"
+            name="city"
+            required
+        />
+
+        <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </form>
+
+    <!-- ✅ ERROR MESSAGE PLACE (if needed later) -->
+    <div style="margin-top:20px; color:red;">
+        <!-- This will work if you convert to JSP -->
+        <!-- ${error} -->
+    </div>
+
+</div>
+
+</body>
+</html>
